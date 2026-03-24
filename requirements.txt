@@ -1,0 +1,7 @@
+akshare
+pandas
+gymnasium
+stable-baselines3
+matplotlib
+shimmy
+tensorboard

@@ -1,0 +1,25 @@
+version: '3.8'
+
+services:
+  quantlab:
+    build: .
+    container_name: quant_agent_v1
+    volumes:
+      - ./:/app
+    environment:
+      - PYTHONPATH=/app
+      - OPENROUTER_API_KEY=${OPENROUTER_API_KEY}
+    working_dir: /app
+    command: python train.py
+    tty: true
+
+  # One-off service for plotting trading behavior
+  plot_trades:
+    build: .
+    volumes:
+      - ./:/app
+    environment:
+      - PYTHONPATH=/app
+    working_dir: /app
+    command: python plot_trades.py
+    profiles: ["plot"]  # Only run when explicitly requested with --profile plot
