@@ -5,3 +5,5 @@ stable-baselines3
 matplotlib
 shimmy
 tensorboard
+ta  # Pure Python technical analysis library (TA-Lib alternative)
+numpy
