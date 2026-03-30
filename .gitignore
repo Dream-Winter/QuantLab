@@ -37,15 +37,27 @@ logs_v2/
 tensorboard/
 tensorboard_simple/
 tensorboard_v2/
-*.zip  # 模型文件
+
+# Models and checkpoints
+*.zip
 *.pt
 *.pth
 *.ckpt
 *.h5
 *.hdf5
 *.model
+
+# Data artifacts
 *.csv  # 临时数据文件（训练/测试集切分文件）
 !requirements.txt  # 保留依赖列表
+
+# Node.js (if present)
+node_modules/
+package.json
+package-lock.json
+npm-debug.log
+yarn-debug.log
+yarn-error.log
 
 # Environment variables
 .env
